@@ -1,6 +1,6 @@
 export const FooterComponents = () => {
     return (
-        <footer className="text-white border-t-2 bg-primary">
+        <footer className="mt-40 text-white border-t-2 bg-primary">
             <div className="max-w-5xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
                 <div className="flex justify-center ">
                     <h1 className="text-4xl font-black ">Sikojoki</h1>

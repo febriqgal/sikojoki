@@ -27,7 +27,9 @@ module.exports = {
         },
       },
       themes: {
-        light: {},
+        light: {
+          colors: { primary: "#00668c", foreground: "#d4eaf7" },
+        },
         dark: {},
       },
     }),
@@ -35,3 +37,13 @@ module.exports = {
 };
 
 //https://colorhunt.co/palette/35155d512b814477ce8cabff
+// --primary-100:#d4eaf7;
+// --primary-200:#b6ccd8;
+// --primary-300:#3b3c3d;
+// --accent-100:#71c4ef;
+// --accent-200:#00668c;
+// --text-100:#1d1c1c;
+// --text-200:#313d44;
+// --bg-100:#fffefb;
+// --bg-200:#f5f4f1;
+// --bg-300:#cccbc8;

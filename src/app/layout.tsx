@@ -31,11 +31,11 @@ export default function RootLayout({
 
   return (
     <html lang="en" className='scroll-smooth'>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg `}>
         <Providers>
           {value >= 100 ?
             <motion.div
-              className='sm:hidden fixed z-[9999] w-full  flex justify-center items-center py-4'
+              className=' fixed z-[9999] w-full  flex justify-center items-center py-4'
               initial={{ scale: 0 }}
               animate={{ rotate: 0, scale: 1 }}
               transition={{
@@ -61,36 +61,36 @@ export default function RootLayout({
 
             </motion.div>
             :
+            <></>
+            // <nav className={value >= 500 ?
+            //   "transition-all duration-1000  fixed flex items-center justify-center text-white w-full gap-4 bg-primary z-[9999] py-4 border-b-1" :
+            //   "transition-all duration-1000 fixed flex items-center justify-center w-full gap-4 backdrop-blur-md z-[9999] py-4 border-b-1"
+            // }>
+            //   <div className='flex items-center justify-center w-full px-10 sm:justify-between sm:px-40'>
+            //     <h1 className={value >= 500 ? "text-white text-4xl font-black" : "text-primary text-4xl font-black"} >Sikojoki</h1>
+            //     <div className='hidden gap-2 sm:flex '>
+            //       {navigation.map((e, i) => {
+            //         return (
+            //           <a href={e.href} key={i}>
+            //             <Button
+            //               className={value >= 500 ? "text-white" : "text-primary"}
+            //               radius='full'
+            //               variant='light'
+            //               color={value >= 500 ? "warning" : "primary"}
+            //             >{e.title}</Button>
+            //           </a>
+            //         )
+            //       })}
 
-            <nav className={value >= 500 ?
-              "transition-all duration-1000  fixed flex items-center justify-center text-white w-full gap-4 bg-primary z-[9999] py-4 border-b-1" :
-              "transition-all duration-1000 fixed flex items-center justify-center w-full gap-4 backdrop-blur-md z-[9999] py-4 border-b-1"
-            }>
-              <div className='flex items-center justify-center w-full px-10 sm:justify-between sm:px-40'>
-                <h1 className={value >= 500 ? "text-white text-4xl font-black" : "text-primary text-4xl font-black"} >Sikojoki</h1>
-                <div className='hidden gap-2 sm:flex '>
-                  {navigation.map((e, i) => {
-                    return (
-                      <a href={e.href} key={i}>
-                        <Button
-                          className={value >= 500 ? "text-white" : "text-primary"}
-                          radius='full'
-                          variant='light'
-                          color={value >= 500 ? "warning" : "primary"}
-                        >{e.title}</Button>
-                      </a>
-                    )
-                  })}
+            //       <Button
+            //         radius='full'
+            //         className={value >= 500 ? "bg-white text-primary" : "primary"}
 
-                  <Button
-                    radius='full'
-                    className={value >= 500 ? "bg-white text-primary" : "primary"}
-
-                    color={value >= 500 ? "warning" : "primary"}
-                  >Kontak</Button>
-                </div>
-              </div>
-            </nav>
+            //         color={value >= 500 ? "warning" : "primary"}
+            //       >Kontak</Button>
+            //     </div>
+            //   </div>
+            // </nav>
           }
 
           <main className='flex items-center justify-center min-h-screen'>
