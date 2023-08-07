@@ -4,18 +4,18 @@ import { Button } from '@nextui-org/button'
 import { useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import HoverDevCards from '@/components/card';
-import Card from '@/components/card';
+import ServiceIcon from '@/components/icons/service';
+import ArrowDownIcon from '@/components/icons/arrowDown';
 export default function Home() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
 
   }, [])
   return (
-    <div className='flex flex-col w-full px-10 sm:px-40 '>
-      <div className="flex items-center justify-center min-h-screen py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className='flex flex-col w-full px-10 sm:px-40'>
+      <div className="flex items-center justify-center min-h-screen py-16 mx-auto border-b-2 sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="max-w-xl sm:mx-auto lg:max-w-2xl">
-          <div data-aos="fade-up" className="flex flex-col mb-16 sm:text-center sm:mb-0">
+          <div data-aos="fade-left" className="flex flex-col mb-16 sm:text-center sm:mb-0">
             <a href="/" className="mb-6 sm:mx-auto">
               <div className="flex items-center justify-center w-12 h-12 rounded-full ">
                 <svg
@@ -67,9 +67,11 @@ export default function Home() {
                 Architecting the Future: Building Code, Crafting Innovation.
               </p>
             </div>
+
             <a href='#service'>
 
               <Button
+                startContent={<ArrowDownIcon className='h-6 animate-bounce fill-white' />}
                 radius='full'
                 color='primary'
                 variant='shadow'
@@ -81,7 +83,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Card />
+      <PriceComponents />
     </div>
   )
 }

@@ -7,6 +7,8 @@ import { Poppins } from 'next/font/google'
 import { useState } from 'react'
 import './globals.css'
 import { Providers } from './providers'
+import ServiceIcon from '@/components/icons/service'
+import PortfolioIcon from '@/components/icons/portfolio'
 const inter = Poppins({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin']
@@ -47,11 +49,11 @@ export default function RootLayout({
 
               <nav className='flex items-center justify-between gap-4 px-5 py-2 text-white border-2 rounded-full shadow-2xl bg-primary'>
                 <a href='#service' className='flex items-center gap-2'>
-                  <CheckoutIcons className='h-5 fill-white' />
+                  <ServiceIcon className='h-5 fill-white' />
                   <h1>Servise</h1>
                 </a>
                 <a href='#service' className='flex items-center gap-2'>
-                  <CheckoutIcons className='h-5 fill-white' />
+                  <PortfolioIcon className='h-5 fill-white' />
                   <h1>Portfolio</h1>
                 </a>  <a href='#service' className='flex items-center gap-2'>
                   <CheckoutIcons className='h-5 fill-white' />
@@ -93,7 +95,7 @@ export default function RootLayout({
             // </nav>
           }
 
-          <main className='flex items-center justify-center min-h-screen'>
+          <main>
             {children}
           </main>
           <FooterComponents />
